@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";  
+  
+.basic-multi-select {  
+  .select__control {  
+    background-color: $soft-bg;  
+    border-color: darken($soft-bg, 5%);  
+    color: $main-color;  
+    &:hover {  
+      border-color: darken($soft-bg, 10%);  
+    }  
+  }  
+  
+  .select__menu {  
+    background-color: darken($soft-bg, 5%);  
+  }  
+  
+  .select__option {  
+    color: $main-color;  
+    &:hover {  
+      background-color: darken($soft-bg, 10%);  
+    }  
+  }  
+  
+  .select__multi-value {  
+    background-color: darken($soft-bg, 5%);  
+  }  
+  
+  .select__multi-value__label {  
+    color: $main-color;  
+  }  
+  
+  .select__multi-value__remove:hover {  
+    background-color: darken($soft-bg, 10%);  
+    color: $soft-color;  
+  }  
+}  
