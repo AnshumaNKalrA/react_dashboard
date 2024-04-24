@@ -1,0 +1,92 @@
+/* TeamIssuesTable.scss */  
+.table {  
+    width: 100%;
+    border-collapse: collapse; /* Ensures that the borders collapse into a single border */  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow around the table for depth */  
+    margin-top: 20px; /* Adds some space above the table */  
+    font-size: 1.2rem; /* Adjusts the font size for readability */  
+  }  
+    
+  th, td {  
+    border: 3px solid #ddd; /* Light grey border for each cell */  
+    padding: 15px; /* Adds padding inside each cell for spacing */  
+  }  
+    
+  th {  
+    background-color: lightgrey; /* Light grey background for headers */  
+    color: #333; /* Dark text color for contrast */  
+    padding: 20px;
+  }  
+
+  th:not(.team-name), td:not(.team-name) {  
+    width: calc(75% / 5); /* Assuming you have 5 other columns */  
+    text-align:center;
+}  
+    
+  .team-name {  
+    width: 25%; /* Team name column will take up 25% of the table's total width */  
+    text-align: left;
+  }  
+
+  .table-cell {  
+    position: relative;  
+    padding-bottom: 30px;
+  }  
+    
+  .pill {  
+    position: absolute;  
+    bottom: 10px;  
+    left: 50%;  
+    transform: translateX(-50%);  
+    height: 18px;  
+    width: 50%;  
+    border-radius: 10px;  
+    display: flex;  
+    overflow: hidden; 
+      
+    .new-issues, .recurrent-issues {  
+      height: 100%;  
+    }  
+    
+    .new-issues {  
+      background-color: lightblue; /* Light green */  
+      transition: width 0.3s ease; /* Smooth transition for visual feedback */  
+
+      .newIssues{
+        color: black;
+      }
+
+    }  
+    
+    .recurrent-issues {  
+      background-color: blue; /* Darker green */  
+      transition: width 0.3s ease; /* Smooth transition for visual feedback */  
+
+      .recurrentIssues{
+        color: black;
+      }
+    }  
+  }
+
+  .projectpill {
+    position: absolute;  
+    bottom: 10px;  
+    left: 50%;  
+    transform: translateX(-50%);  
+    height: 18px;  
+    width: 25%;  
+    border-radius: 10px;  
+    display: flex;  
+    overflow: hidden; 
+    background-color: orange;
+    align-items: center;
+
+    .projectsTrend{
+      color: black;
+    }
+  }  
+
+
+
+
+  

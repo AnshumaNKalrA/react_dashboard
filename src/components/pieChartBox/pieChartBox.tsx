@@ -1,11 +1,11 @@
-import React from 'react';  
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip, Legend, Label } from "recharts";  
 import "./pieChartBox.scss";  
   
 type ChartItem = {  
   name: string;  
   value: number;  
-  color: string;  
+  color: string;
+  trend?: number;   
 };  
   
 type Props = {  
@@ -18,12 +18,19 @@ const PieChartBox = (props: Props) => {
   const totalValue = props.chartData.reduce((acc, cur) => acc + cur.value, 0);  
   
   // Custom legend formatter to include value and percentage  
-  const renderColorfulLegendText = (value, entry) => {  
+  const renderColorfulLegendText = (value: string, entry: any) => {  
     const { color } = entry.payload; // Access the chart data item  
     const percentage = ((entry.payload.value / totalValue) * 100).toFixed(2);  
+    let trendSymbol = "";
+
+    if(entry.payload.trend > 0){
+      trendSymbol = `↑${entry.payload.trend}`;
+    } else if (entry.payload.trend < 0) {  
+      trendSymbol = `↓${Math.abs(entry.payload.trend)}`; // Downward arrow for negative trend  
+    }
     return (  
       <span style={{ color }}>  
-        {`${value}: ${entry.payload.value} (${percentage}%)`}  
+         {`${value}: ${entry.payload.value} (${percentage}%) ${trendSymbol}`}  
       </span>  
     );  
   };  
