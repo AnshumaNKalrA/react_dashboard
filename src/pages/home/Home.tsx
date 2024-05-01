@@ -5,9 +5,6 @@ import SeverityData from '../../components/severityData/SeverityData';
 import MultiSelectTeams from "../../components/multiSelectForm/MultiSelectForm";
 import TeamIssuesTable from '../../components/teamTable/TeamTable';
 import LastYearData from '../../components/lastYearData/LastYearData'
-import {
-  tableData,
-} from "../../data";
 import "./home.scss";
 
 
