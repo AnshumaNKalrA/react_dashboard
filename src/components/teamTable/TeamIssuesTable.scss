@@ -44,7 +44,7 @@
     display: flex;  
     overflow: hidden; 
       
-    .new-issues, .recurrent-issues {  
+    .new-issues, .resolved-issues {  
       height: 100%;  
     }  
     
@@ -58,11 +58,11 @@
 
     }  
     
-    .recurrent-issues {  
+    .resolved-issues {  
       background-color: blue; /* Darker green */  
       transition: width 0.3s ease; /* Smooth transition for visual feedback */  
 
-      .recurrentIssues{
+      .resolvedIssues{
         color: black;
       }
     }  

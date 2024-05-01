@@ -51,48 +51,77 @@ export const menu = [
   },
 ];
 
-export const severityData = {
-  title : "Severity Data",
-  chartData : [
-    {name:"High",value:101,color:"#E72929"},
-    {name:"Medium",value:1545,color:"#FDA403"},
-    {name:"Low",value:4656,color:"#C7B7A3"},
-  ]
-};
 
 export const teamsData = [  
   { id: 'CrowdCompass', name: 'CrowdCompass' },  
   { id: 'Stargate', name: 'Stargate' },  
+  { id: 'Core-Appointments', name: 'Core-Appointments' },  
   { id: 'Falcon', name: 'Falcon' },  
+  { id: 'Social Tables', name: 'Social Tables' },  
   { id: 'QuickMobile', name: 'QuickMobile' },  
+  { id: 'Decision Street', name: 'Decision Street' },  
+  { id: 'Business Transient', name: 'Business Transient' },  
+  { id: 'Core-Events', name: 'Core-Events' },  
   { id: 'WeddingSpot', name: 'WeddingSpot' },  
+  { id: 'Web Attendee Experience', name: 'Web Attendee Experience' },  
+  { id: 'DevHub', name: 'DevHub' },  
+  { id: 'Ecommerce', name: 'Ecommerce' },  
   { id: 'EMI', name: 'EMI' },  
-];  
+  { id: 'Development-Framework', name: 'Development-Framework' },  
+  { id: 'Core-Abstract-management', name: 'Core-Abstract-management' },  
+  { id: 'CORE-Normandy', name: 'CORE-Normandy' },  
+  { id: 'Passkey', name: 'Passkey' },  
+  { id: 'Conference', name: 'Conference' },  
+  { id: 'Core-CSN', name: 'Core-CSN' },  
+  { id: 'OnSite Solutions', name: 'OnSite Solutions' },  
+  { id: 'AppSecTesting', name: 'AppSecTesting' },  
+  { id: 'Lanyon Meetings', name: 'Lanyon Meetings' },  
+  { id: 'Client-Services', name: 'Client-Services' },  
+  { id: 'Direct book', name: 'Direct book' },  
+  { id: 'Core-Surveys', name: 'Core-Surveys' },  
+  { id: 'PayGo', name: 'PayGo' },  
+  { id: 'Core-Services', name: 'Core-Services' },  
+  { id: 'Core-eMarketing', name: 'Core-eMarketing' },  
+  { id: 'New Users', name: 'New Users' },  
+  { id: 'InstantBook', name: 'InstantBook' },  
+  { id: 'DoubleDutch', name: 'DoubleDutch' },  
+  { id: 'Nucleus', name: 'Nucleus' },  
+  { id: 'AppsecReview', name: 'AppsecReview' },  
+  { id: 'SHOFLO', name: 'SHOFLO' },  
+  { id: 'shared', name: 'shared' },  
+  { id: 'Budget', name: 'Budget' },  
+  { id: 'Integrations', name: 'Integrations' },  
+  { id: 'MeetingsManagement', name: 'MeetingsManagement' },  
+  { id: 'SRC', name: 'SRC' },  
+  { id: 'Mandalorians', name: 'Mandalorians' },  
+  { id: 'Appsupport', name: 'Appsupport' },  
+  { id: 'iCapture', name: 'iCapture' },  
+  { id: 'Jifflenow', name: 'Jifflenow' }  
+]
 
-export const tableData: TeamData[] = [  
-  {  
-    name: "CrowdCompass",  
-    high: 4,  
-    medium: 7,  
-    low: 10,  
-    projects: 2,  
-    scanTrend: [20, 15, 18, 22, 19],  
-    highNew: 2,  
-    mediumNew: 3,  
-    projectTrend:4,
-    lowNew: 5,  
-  },  
-  {  
-    name: "Stargate",  
-    high: 3,  
-    medium: 5,  
-    low: 8,  
-    projects: 3,  
-    scanTrend: [10, 12, 14, 13, 15],  
-    highNew: 1,  
-    projectTrend:-3,
-    mediumNew: 2,  
-    lowNew: 4,  
-  },  
-  // Add more team data as needed  
-];
+// export const tableData: TeamData[] = [  
+//   {  
+//     name: "CrowdCompass",  
+//     high: 4,  
+//     medium: 7,  
+//     low: 10,  
+//     projects: 2,  
+//     scanTrend: [20, 15, 18, 22, 19],  
+//     highNew: 2,  
+//     mediumNew: 3,  
+//     projectTrend:4,
+//     lowNew: 5,  
+//   },  
+//   {  
+//     name: "Stargate",  
+//     high: 3,  
+//     medium: 5,  
+//     low: 8,  
+//     projects: 3,  
+//     scanTrend: [10, 12, 14, 13, 15],  
+//     highNew: 1,  
+//     projectTrend:-3,
+//     mediumNew: 2,  
+//     lowNew: 4,  
+//   },  
+// ];

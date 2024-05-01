@@ -36,7 +36,12 @@ const MultiSelectTeams: React.FC<MultiSelectTeamsProps> = ({ selectedTeams, onTe
       ':hover': {  
         borderColor: 'var(--main-color)',  
       },  
+      '& input': {  
+        color:'#FFFFFF',
+        caretColor: '#FFFFFF', // Assuming you have a light color variable defined  
+      },  
     }),  
+
     option: (provided, state) => ({  
       ...provided,  
       backgroundColor: state.isFocused ? 'darken(var(--soft-bg), 10%)' : 'var(--soft-bg)', // Adjust for hover  
@@ -58,6 +63,8 @@ const MultiSelectTeams: React.FC<MultiSelectTeamsProps> = ({ selectedTeams, onTe
       className="basic-multi-select"      
       classNamePrefix="select"  
       styles={customStyles} // Apply the custom styles  
+      menuPortalTarget={document.body} // Append the menu to body to help with overflow  
+      maxMenuHeight={175} // Maximum height for the dropdown menu  
     />      
   );      
 };      
