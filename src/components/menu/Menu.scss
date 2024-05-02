@@ -19,22 +19,24 @@
       }
     }
 
-    .listItem {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px;
-      border-radius: 5px;
-
-      &:hover {
-        background-color: $soft-bg;
-      }
-
-      .listItemTitle {
-        @include lg {
-          display: none;
-        }
-      }
-    }
+    .listItem {  
+      display: flex;  
+      align-items: center;  
+      gap: 10px;  
+      padding: 10px;  
+      border-radius: 5px;  
+      
+      &:hover,  
+      &.active { // Highlight the active item  
+        background-color: $soft-bg;  
+      }  
+      
+      .listItemTitle {  
+        @include lg {  
+          display: none;  
+        }  
+      }  
+    }  
+    
   }
 }

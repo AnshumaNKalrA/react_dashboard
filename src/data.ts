@@ -9,7 +9,7 @@ export const menu = [
         id: 1,
         title: "Overview",
         url: "/",
-        icon: "home.svg",
+        icon: "overview.svg",
       },
     ]
   },
@@ -98,30 +98,3 @@ export const teamsData = [
   { id: 'iCapture', name: 'iCapture' },  
   { id: 'Jifflenow', name: 'Jifflenow' }  
 ]
-
-// export const tableData: TeamData[] = [  
-//   {  
-//     name: "CrowdCompass",  
-//     high: 4,  
-//     medium: 7,  
-//     low: 10,  
-//     projects: 2,  
-//     scanTrend: [20, 15, 18, 22, 19],  
-//     highNew: 2,  
-//     mediumNew: 3,  
-//     projectTrend:4,
-//     lowNew: 5,  
-//   },  
-//   {  
-//     name: "Stargate",  
-//     high: 3,  
-//     medium: 5,  
-//     low: 8,  
-//     projects: 3,  
-//     scanTrend: [10, 12, 14, 13, 15],  
-//     highNew: 1,  
-//     projectTrend:-3,
-//     mediumNew: 2,  
-//     lowNew: 4,  
-//   },  
-// ];

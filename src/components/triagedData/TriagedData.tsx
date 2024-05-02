@@ -13,11 +13,11 @@ interface FetchDataProps {
   
 // Status colors mapping  
 const statusColors: Record<string, string> = {  
-  "To Verify": "#7BC9FF",  
+  "To Verify": "#7BC9F9",  
   "Not Exploitable": "#135D66",  
-  "Confirmed": "#7EA1FF",  
-  "Urgent": "#1C1678",  
-  "Proposed Not Exploitable": "#A3FFD6",  
+  "Confirmed": "#0081FF",  
+  "Urgent": "#1C1688",  
+  "Proposed Not Exploitable": "#0FAF0F",  
 };  
   
 // FetchData component  
@@ -31,7 +31,7 @@ const TriagedData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
           const formData = new FormData();  
           selectedTeams.forEach(team => formData.append('teams', team));  
     
-          const response = await fetch('http://localhost:8000/checkmarx/triaged', {  
+          const response = await fetch('http://172-18-42-23.core.cvent.org:80/checkmarx/triaged', {  
             method: 'POST',  
             body: formData,  
           });  

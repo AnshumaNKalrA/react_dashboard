@@ -14,7 +14,7 @@ interface FetchDataProps {
 // Status colors mapping  
 const statusColors: Record<string, string> = {  
   "New": "#222831",  
-  "Recurrent": "#C7C8CC",   
+  "Recurrent": "#9999FF",   
 };  
   
 // FetchData component  
@@ -28,7 +28,7 @@ const FrequencyData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
           const formData = new FormData();  
           selectedTeams.forEach(team => formData.append('teams', team));  
     
-          const response = await fetch('http://localhost:8000/checkmarx/frequency', {  
+          const response = await fetch('http://172-18-42-23.core.cvent.org:80/checkmarx/frequency', {  
             method: 'POST',  
             body: formData,  
           });  

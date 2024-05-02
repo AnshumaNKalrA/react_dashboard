@@ -45,10 +45,10 @@ const PieChartBox = (props: Props) => {
               data={props.chartData}  
               cx="50%"  
               cy="50%"  
-              innerRadius="70%"  
+              innerRadius="75%"  
               outerRadius="90%"  
               fill="#8884d8"  
-              paddingAngle={5}  
+              paddingAngle={2}  
               dataKey="value"  
               nameKey="name"  
             >  
@@ -59,7 +59,7 @@ const PieChartBox = (props: Props) => {
               <Label value={`Total: ${totalValue}`} position="center" className="pie-center-label" />  
             </Pie>  
             <Tooltip contentStyle={{ background: "white", borderRadius: "5px" }} />  
-            <Legend iconSize={10} layout="vertical" verticalAlign="middle" align="right" formatter={renderColorfulLegendText} />  
+            <Legend iconSize={20} layout="vertical" verticalAlign="middle" align="right" formatter={renderColorfulLegendText} wrapperStyle={{ lineHeight: '24px' }}/>  
           </PieChart>  
         </ResponsiveContainer>  
       </div>  

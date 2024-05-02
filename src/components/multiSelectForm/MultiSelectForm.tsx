@@ -2,6 +2,7 @@ import React from 'react';
 import Select, { ActionMeta, MultiValue } from 'react-select';    
 import { teamsData } from '../../data';   
 import './multiSelectForm.scss';
+import { darken } from 'polished';
     
 interface OptionType {      
   value: string;      
@@ -30,24 +31,24 @@ const MultiSelectTeams: React.FC<MultiSelectTeamsProps> = ({ selectedTeams, onTe
   const customStyles = {  
     control: (provided) => ({  
       ...provided,  
-      backgroundColor: 'var(--soft-bg)',  
-      borderColor: 'var(--dark-bg)',  
-      color: 'var(--main-color)',  
+      backgroundColor: '#e5e1e1',  
+      borderColor: '#ffffff',  
+      color: '#000000',  
       ':hover': {  
-        borderColor: 'var(--main-color)',  
+        borderColor: '#e5e1e1',  
       },  
       '& input': {  
-        color:'#FFFFFF',
-        caretColor: '#FFFFFF', // Assuming you have a light color variable defined  
+        color:'#000000',
+        caretColor: '#000000', // Assuming you have a light color variable defined  
       },  
     }),  
 
     option: (provided, state) => ({  
       ...provided,  
-      backgroundColor: state.isFocused ? 'darken(var(--soft-bg), 10%)' : 'var(--soft-bg)', // Adjust for hover  
-      color: 'var(--main-color)',  
+      backgroundColor: state.isFocused ? darken(0.1, '#f1f1f1') : '#f1f1f1',   // Adjust for hover  
+      color: '#000000',  
       ':active': {  
-        backgroundColor: 'darken(var(--soft-bg), 20%)',  
+        backgroundColor: 'darken(#f1f1f1, 20%)',  
       },  
     }),  
     // Add other custom styles here as needed  

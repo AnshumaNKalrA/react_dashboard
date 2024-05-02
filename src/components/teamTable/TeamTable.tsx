@@ -33,7 +33,7 @@ const TeamIssuesTable: React.FC<TeamIssuesTableProps> = ({ selectedTeams }) => {
         const formData = new FormData();  
         selectedTeams.forEach(team => formData.append('teams', team));  
     
-        const response = await fetch('http://localhost:8000/checkmarx/table', {  
+        const response = await fetch('http://172-18-42-23.core.cvent.org:80/checkmarx/table', {  
           method: 'POST',  
           body: formData,  
         });  

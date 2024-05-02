@@ -16,11 +16,11 @@ interface FetchDataProps {
 const statusColors: Record<string, string> = {    
   "High": "#E72929",    
   "Medium": "#FDA403",    
-  "Low": "#C7B7A3",    
+  "Low": "#a9a9a9",    
   // Assuming default colors for trend data  
   "High Trend": "#E72929",  
   "Medium Trend": "#FDA403",  
-  "Low Trend": "#C7B7A3",  
+  "Low Trend": "#a9a9a9",  
 };    
   
 const SeverityData: React.FC<FetchDataProps> = ({ selectedTeams }) => {    
@@ -32,7 +32,7 @@ const SeverityData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
         const formData = new FormData();    
         selectedTeams.forEach(team => formData.append('teams', team));    
   
-        const response = await fetch('http://localhost:8000/checkmarx/severity', {    
+        const response = await fetch('http://172-18-42-23.core.cvent.org:80/checkmarx/severity', {    
           method: 'POST',    
           body: formData,    
         });    
