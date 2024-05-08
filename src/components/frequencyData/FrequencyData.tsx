@@ -14,7 +14,7 @@ interface FetchDataProps {
 // Status colors mapping  
 const statusColors: Record<string, string> = {  
   "New": "#222831",  
-  "Recurrent": "#9999FF",   
+  "Recurrent": "#9ba6a5",   
 };  
   
 // FetchData component  

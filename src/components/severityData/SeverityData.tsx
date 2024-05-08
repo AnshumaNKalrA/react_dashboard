@@ -16,11 +16,11 @@ interface FetchDataProps {
 const statusColors: Record<string, string> = {    
   "High": "#E72929",    
   "Medium": "#FDA403",    
-  "Low": "#a9a9a9",    
+  "Low": "#d9b650",    
   // Assuming default colors for trend data  
   "High Trend": "#E72929",  
   "Medium Trend": "#FDA403",  
-  "Low Trend": "#a9a9a9",  
+  "Low Trend": "#d9b650",  
 };    
   
 const SeverityData: React.FC<FetchDataProps> = ({ selectedTeams }) => {    

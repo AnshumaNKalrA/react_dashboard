@@ -1,4 +1,3 @@
-import TeamData from "./components/teamTable/TeamTable";
 
 export const menu = [
   {

@@ -38,19 +38,19 @@
     bottom: 10px;  
     left: 50%;  
     transform: translateX(-50%);  
-    height: 18px;  
-    width: 70%;  
-    border-radius: 10px;  
-    display: flex;  
-    overflow: hidden; 
+    height: 18px;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
       
     .new-issues, .resolved-issues {  
-      height: 100%;  
+      height: 100%;
     }  
     
     .new-issues {  
-      background-color: lightblue; /* Light green */  
-      transition: width 0.3s ease; /* Smooth transition for visual feedback */  
+      background-color: #e4f1fe;
+      transition: width 0.3s ease;
 
       .newIssues{
         color: black;
@@ -59,16 +59,15 @@
     }  
     
     .resolved-issues {  
-      background-color: blue; /* Darker green */  
-      transition: width 0.3s ease; /* Smooth transition for visual feedback */  
-
+      background-color: #8dc6ff; 
+      transition: width 0.3s ease; 
       .resolvedIssues{
         color: black;
       }
     }  
   }
 
-  .projectpill {
+  .projectpill {  
     position: absolute;  
     bottom: 10px;  
     left: 50%;  
@@ -77,16 +76,18 @@
     width: 25%;  
     border-radius: 10px;  
     display: flex;  
-    overflow: hidden; 
-    background-color: orange;
-    align-items: center;
-
-    .projectsTrend{
-      color: black;
-    }
-  }  
-
-
-
-
-  
+    align-items: center;  
+    justify-content: center; /* Ensure horizontal centering */  
+    overflow: hidden;  
+    background-color: orange;  
+    
+    .projectsTrend {  
+      color: black;  
+      width: 100%; /* Ensure it takes the full width of its parent */  
+      text-align: center; /* Center the text horizontally */  
+    
+      h5 {  
+        margin: 0; /* Reset margin to prevent default spacing */  
+      }  
+    }  
+  }
