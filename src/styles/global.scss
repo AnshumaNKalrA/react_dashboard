@@ -20,6 +20,10 @@ a {
 
 .container {
   display: flex;
+  transform: scale(0.7);
+  transform-origin: top left; /* Adjust as needed */  
+  width: 140%; /* To compensate for the shrinkage due to scaling */  
+  height: 100%; /* Adjust height as well to ensure full coverage */  
 }
 
 .menuContainer {
@@ -35,5 +39,5 @@ a {
 .contentContainer {
   padding: 5px 20px;
   width: 100%;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 60px);
 }

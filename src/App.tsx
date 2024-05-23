@@ -1,10 +1,11 @@
-import Home from "./pages/home/Home";
+import Mend from "./pages/mend/Mend"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import "./styles/global.scss";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Checkmarx from "./pages/checkmarx/Checkmarx";
 
 const queryClient = new QueryClient();
 
@@ -35,8 +36,12 @@ function App() {
       children: [
         {
           path: "/checkmarx",
-          element: <Home />,
+          element: <Checkmarx />,
         },
+        {
+          path: "/mend",
+          element: <Mend />
+        }
       ],
     },
   ]);

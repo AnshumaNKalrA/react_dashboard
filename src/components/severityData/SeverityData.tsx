@@ -66,7 +66,7 @@ const SeverityData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
   
   return (    
     <div>       
-        <PieChartBox title="Severity Distribution" chartData={chartData} />    
+        <PieChartBox title="Severity Distribution" chartData={chartData} innerRadius="75%" outerRadius="90%"/>    
     </div>    
   );    
 };    

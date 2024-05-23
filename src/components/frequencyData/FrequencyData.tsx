@@ -57,7 +57,7 @@ const FrequencyData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
     
     return (  
       <div>  
-          <PieChartBox title="New and Recurrent Findings" chartData={chartData} />  
+          <PieChartBox title="New and Recurrent Findings" chartData={chartData} innerRadius="75%" outerRadius="90%"/>  
       </div>  
     );  
   };  

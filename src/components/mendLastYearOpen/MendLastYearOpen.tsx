@@ -7,26 +7,25 @@ interface ChartItem {
 }  
   
 interface FetchDataProps {  
-  selectedTeams: string[];  
-}  
+    selectedTeams: string[];  
+  }  
   
-const LastYearData: React.FC<FetchDataProps> = ({ selectedTeams }) => {  
+const MendLastYearOpen: React.FC<FetchDataProps> = ({ selectedTeams }) => {  
   const [chartData, setChartData] = useState<ChartItem[]>([]);  
     
   useEffect(() => {  
     const fetchData = async () => {  
       try {  
-        // Prepare the request payload as JSON  
         const payload = {  
           teams: selectedTeams,  
         };  
           
-        const response = await fetch('http://172-18-42-23.core.cvent.org:80/checkmarx/year', {  
+        const response = await fetch('http://172-18-42-23.core.cvent.org:80/mend/openyear', {  
           method: 'POST',  
           headers: {  
-            'Content-Type': 'application/json', // Specify the content type as JSON  
+            'Content-Type': 'application/json', 
           },  
-          body: JSON.stringify(payload), // Convert the payload to a JSON string  
+          body: JSON.stringify(payload),
         });  
         const jsonData = await response.json();  
           
@@ -55,4 +54,4 @@ const LastYearData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
   );  
 };  
   
-export default LastYearData;  
+export default MendLastYearOpen;  

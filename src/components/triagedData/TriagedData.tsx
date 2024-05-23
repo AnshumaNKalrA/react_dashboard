@@ -61,7 +61,7 @@ const TriagedData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
     // Conditionally render PieChartBox based on whether there's any data  
     return (  
       <div>  
-          <PieChartBox title="Triaged Findings Distribution" chartData={chartData} />  
+          <PieChartBox title="Triaged Findings Distribution" chartData={chartData} innerRadius="75%" outerRadius="90%"/>  
       </div>  
     );  
   };  

@@ -1,0 +1,55 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.mend {  
+    display: flex;  
+    flex-direction: column; // Stack elements vertically  
+    // gap: 20px;  
+    height: calc(100vh + 200px); // Ensure the container does not exceed the viewport height  
+    overflow: hidden; // Add scrolling within the container if content exceeds its bounds  
+    // padding: 5px; // Adds some spacing around the content, adjust as needed  
+    box-sizing: border-box; // Ensures padding is included in the height calculation  
+  }  
+    
+  .formHeading, .select-box {  
+    grid-column: 1/-1;
+    // padding: 5px;  
+    box-sizing: border-box; // Include padding and border in the element's total dimensions.
+    margin-bottom: 20px;  
+    max-width: 800px;
+    align-content: justify;
+  }  
+    
+  .columns {    
+    display: flex;    
+    flex-direction: row; // Layout columns side by side    
+    gap: 20px;    
+    align-items: stretch; // Ensure components in both columns align in height  
+  }  
+    
+  .left-column, .right-column {    
+    display: flex;    
+    flex-direction: column; // Stack elements vertically within each column    
+    gap: 20px;    
+    overflow: hidden;  
+    box-sizing: border-box; // Include padding and border in element's total dimensions  
+  }    
+    
+  .left-column {    
+    flex: 1; // Left column takes less space  
+  }    
+    
+  .right-column {    
+    flex: 1.2; // Right column takes slightly more space to make it wider  
+  }    
+    
+  .graph-box, .table {    
+    padding: 20px;    
+    border-radius: 10px;    
+    border: 2px solid $soft-bg;    
+    box-sizing: border-box;    
+    flex-grow: 1; // Allow each component to grow and fill the column height equally    
+    min-height: 0; // Prevent flex items from growing beyond their container bounds    
+    overflow: hidden; // Ensures content does not overflow component bounds    
+  }
+  

@@ -12,13 +12,14 @@ type Props = {
   chartData: ChartItem[];  
 };  
   
-// Define a custom tick component  
+
 const CustomTick: React.FC<any> = ({ x, y, payload, angle = -45, textAnchor = 'end', fontSize = 12 }) => (  
   <g transform={`translate(${x},${y})`}>  
     <text  
       x={0}  
       y={0}  
-      dy={16} // Adjust this based on your styling needs  
+      dy={22} // Adjust this based on your styling needs  
+      dx={-20}
       textAnchor={textAnchor}  
       fill="#666"  
       transform={`rotate(${angle})`}  
