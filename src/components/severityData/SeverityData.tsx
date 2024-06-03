@@ -37,8 +37,7 @@ const SeverityData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
           body: formData,    
         });    
         const jsonData = await response.json();    
-  
-        // This part needs to be adjusted based on how you want to handle trends  
+
         const transformedData: ChartItem[] = [];  
         Object.entries(jsonData).forEach(([key, value]) => {  
           if (!key.includes("Trend")) {  
@@ -46,7 +45,7 @@ const SeverityData: React.FC<FetchDataProps> = ({ selectedTeams }) => {
               name: key,    
               value: value as number,    
               color: statusColors[key],  
-              trend: jsonData[`${key} Trend`] as number || 0, // Assign trend value  
+              trend: jsonData[`${key} Trend`] as number || 0, 
             });  
           }  
         });  

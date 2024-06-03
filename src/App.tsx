@@ -6,6 +6,7 @@ import Menu from "./components/menu/Menu";
 import "./styles/global.scss";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Checkmarx from "./pages/checkmarx/Checkmarx";
+import Datatheorem from "./pages/datatheorem/Datatheorem";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,10 @@ function App() {
         {
           path: "/mend",
           element: <Mend />
+        },
+        {
+          path: "/datatheorem",
+          element: <Datatheorem />
         }
       ],
     },

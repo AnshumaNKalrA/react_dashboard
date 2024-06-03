@@ -72,7 +72,7 @@ function getColorBySeverity(severity: string): string {
     case 'red':  
       return '#FF6347'; // Tomato  
     case 'green':  
-      return '#FFA07A'; // Light Salmon  
+      return '#00FF00'; // Light Salmon  
     case 'yellow':  
       return '#FFFF00'; // Yellow  
     case 'no_shield':  

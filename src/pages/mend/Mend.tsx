@@ -8,7 +8,7 @@ import MendShield from '../../components/mendShield/MendShield';
 import MendDependency from '../../components/mendDependency/MendDependency';
 import MendLastYearOpen from '../../components/mendLastYearOpen/MendLastYearOpen';
 import MendLastYearResolved from '../../components/MendLastYearResolved/MendLastYearResolved'
-
+import MendTeamVulnerabilityTable from '../../components/mendTeamVulnerabilityTable/MendTeamVulnerability';
 
 const Mend: React.FC = () => {  
   const [selectedTeams, setSelectedTeams] = useState<string[]>([]);  
@@ -18,7 +18,7 @@ const Mend: React.FC = () => {
     setDateRange(range);  
   };  
   
-  const handleTeamsChange = (selected: string[]) => {  
+  const handleTeamsChange = (selected: string[]) => {
     setSelectedTeams(selected);  
   };  
   
@@ -28,7 +28,8 @@ const Mend: React.FC = () => {
         <DateRangeDropdown onRangeSelect={handleRangeSelect} />    
         <MultiSelectTeams selectedTeams={selectedTeams} onTeamsChange={handleTeamsChange} teamsData={productData} />    
       </div>    
-      {selectedTeams.length > 0 && dateRange.startDate && dateRange.endDate && (    
+      {selectedTeams.length > 0 && dateRange.startDate && dateRange.endDate && ( 
+        <div>   
         <div className="columns">  
           <div className='left-column'>          
             <MendSeverity selectedTeams={selectedTeams} dateRange={dateRange} />    
@@ -39,8 +40,12 @@ const Mend: React.FC = () => {
             <MendLastYearOpen selectedTeams={selectedTeams} />  
             <MendLastYearResolved selectedTeams={selectedTeams} />  
           </div>  
-        </div>  
-      )}    
+        </div> 
+        <div>
+          <MendTeamVulnerabilityTable selectedTeams={selectedTeams} />
+        </div> 
+        </div> 
+      )}   
     </div>    
   );  
 }    

@@ -5,7 +5,7 @@
     display: flex;  
     flex-direction: column; // Stack elements vertically  
     // gap: 20px;  
-    height: calc(100vh + 200px); // Ensure the container does not exceed the viewport height  
+    // height: calc(100vh + 2000px); // Ensure the container does not exceed the viewport height  
     overflow: hidden; // Add scrolling within the container if content exceeds its bounds  
     // padding: 5px; // Adds some spacing around the content, adjust as needed  
     box-sizing: border-box; // Ensures padding is included in the height calculation  
@@ -21,10 +21,12 @@
   }  
     
   .columns {    
+    transform: scale(85%);
     display: flex;    
     flex-direction: row; // Layout columns side by side    
-    gap: 20px;    
+    gap: 0;    
     align-items: stretch; // Ensure components in both columns align in height  
+    margin-top: -70px;
   }  
     
   .left-column, .right-column {    
@@ -40,16 +42,20 @@
   }    
     
   .right-column {    
-    flex: 1.2; // Right column takes slightly more space to make it wider  
+    flex: 1.4; // Right column takes slightly more space to make it wider  
   }    
-    
+  
+  .left-column > div, .right-column > div {  
+    flex: 1;  
+  }  
+  
   .graph-box, .table {    
-    padding: 20px;    
-    border-radius: 10px;    
-    border: 2px solid $soft-bg;    
-    box-sizing: border-box;    
+    // padding: 20px;    
+    // border-radius: 10px;    
+    // border: 2px solid $soft-bg;    
+    // box-sizing: border-box;    
     flex-grow: 1; // Allow each component to grow and fill the column height equally    
-    min-height: 0; // Prevent flex items from growing beyond their container bounds    
-    overflow: hidden; // Ensures content does not overflow component bounds    
+    // min-height: 0; // Prevent flex items from growing beyond their container bounds    
+    // overflow: hidden; // Ensures content does not overflow component bounds    
   }
   

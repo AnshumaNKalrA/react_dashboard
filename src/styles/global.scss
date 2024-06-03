@@ -20,9 +20,9 @@ a {
 
 .container {
   display: flex;
-  transform: scale(0.7);
+  transform: scale(0.8);
   transform-origin: top left; /* Adjust as needed */  
-  width: 140%; /* To compensate for the shrinkage due to scaling */  
+  width: 120%; /* To compensate for the shrinkage due to scaling */  
   height: 100%; /* Adjust height as well to ensure full coverage */  
 }
 

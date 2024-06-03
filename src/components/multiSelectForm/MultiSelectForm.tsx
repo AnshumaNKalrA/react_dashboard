@@ -55,8 +55,7 @@ const MultiSelectTeams: React.FC<MultiSelectTeamsProps> = ({ selectedTeams, onTe
       borderRadius: '5px',  
       backgroundColor: state.isFocused ? darken(0.1, '#f1f1f1') : '#f1f1f1',  
       color: '#000000',  
-      ':active': {  
-        // Note: Fixed the darken usage here. Previously it was incorrectly passed as a string.  
+      ':active': {
         backgroundColor: darken(0.2, '#f1f1f1'),  
       },  
       transition: 'background-color 0.2s ease',  
@@ -72,9 +71,9 @@ const MultiSelectTeams: React.FC<MultiSelectTeamsProps> = ({ selectedTeams, onTe
       onChange={handleChange}  
       className="basic-multi-select"  
       classNamePrefix="select"  
-      styles={customStyles} // Apply the custom styles  
-      menuPortalTarget={document.body} // Append the menu to body to help with overflow  
-      maxMenuHeight={175} // Maximum height for the dropdown menu  
+      styles={customStyles} 
+      menuPortalTarget={document.body} 
+      maxMenuHeight={175} 
     />  
   );  
 };  

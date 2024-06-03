@@ -11,28 +11,23 @@ interface ChartItem {
 
 interface FetchDataProps {  
   selectedTeams: string[];  
-  dateRange: {  
-    startDate: Date | null;  
-    endDate: Date | null;  
-  };  
-}
+}  
+  
 
-const MendDependency: React.FC<FetchDataProps> = ({ selectedTeams, dateRange }) => {  
+const DataTheoremseverity: React.FC<FetchDataProps> = ({ selectedTeams }) => {  
     // Explicitly type chartData as an array of ChartItem  
     const [chartData, setChartData] = useState<ChartItem[]>([]);  
     
     useEffect(() => {  
       const fetchData = async () => {  
         try {  
-          const response = await fetch('http://172-18-42-23.core.cvent.org:80/mend/dependency', {  
+          const response = await fetch('http://172-18-42-23.core.cvent.org:80/datatheorem/severity', {  
             method: 'POST',  
             headers: {  
               'Content-Type': 'application/json',  
             },  
             body: JSON.stringify({  
-              teams: selectedTeams,  
-              start_date: dateRange.startDate?.toISOString().split('T')[0], // Ensure date format matches your backend expectations  
-              end_date: dateRange.endDate?.toISOString().split('T')[0],  
+              teams: selectedTeams,   
             }),  
           });  
           if (!response.ok) {  
@@ -52,14 +47,14 @@ const MendDependency: React.FC<FetchDataProps> = ({ selectedTeams, dateRange }) 
         }  
       };  
     
-      if (selectedTeams.length > 0 && dateRange.startDate && dateRange.endDate) {  
+      if (selectedTeams.length > 0 ) {  
         fetchData();  
       }  
-    }, [selectedTeams, dateRange]);  
+    }, [selectedTeams]);  
     
     return (  
       <div>  
-        <PieChartBox title="Dependency Distribution" chartData={chartData} innerRadius="70%" outerRadius="90%" />  
+        <PieChartBox title="Shield Distribution" chartData={chartData} innerRadius="0%" outerRadius="90%" />  
       </div>  
     );  
   };  
@@ -68,13 +63,17 @@ const MendDependency: React.FC<FetchDataProps> = ({ selectedTeams, dateRange }) 
 // Helper function to determine color based on severity  
 function getColorBySeverity(severity: string): string {  
   switch (severity.toLowerCase()) {  
-    case 'transitive':
-      return '#253DA1'; //Blue
-    case 'direct':  
-      return '#90EE90'; // Light Green  
-    default:  
-      return '#D3D3D3'; // Light Grey for unknown severities  
+    case 'red':  
+      return '#FF6347'; // Tomato  
+    case 'green':  
+      return '#00FF00'; // Light Salmon  
+    case 'yellow':  
+      return '#FFFF00'; // Yellow  
+    case 'no_shield':  
+      return '#D3D3D3'; // Light Grey
+    default:
+      return '#D3D3D3';
   }  
 }  
   
-export default MendDependency;  
+export default DataTheoremseverity;  
